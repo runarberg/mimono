@@ -13,9 +13,6 @@ html, body {
     -webkit-transform: rotate(45deg);
 }
 
-.product-list {
-}
-
 .product-list > li {
     float: right;
     list-style: none;
