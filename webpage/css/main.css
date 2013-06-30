@@ -4,7 +4,7 @@ html, body {
 }
 
 .main-title {
-    background: url("img/logo-1.png");
+    background: url("../img/logo-1.png");
     font-family: sans-serif;
     margin: 0;
     position: fixed;
