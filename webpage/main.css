@@ -37,3 +37,13 @@ html, body {
 .product-list > li a {
     display: inline-block;
 }
+
+/* no-flexbox fallback */
+.no-flexbox .product-list {
+    float: right;
+    white-space: nowrap;
+}
+
+.no-flexbox .product-list > li {
+    display: inline-block;
+}
