@@ -37,3 +37,13 @@ html, body {
     overflow: hidden;
     padding: 20em 0 0 0;
 }
+
+/* no-flexbox fallback */
+.no-flexbox .product-list {
+    float: right;
+    white-space: nowrap;
+}
+
+.no-flexbox .product-list > li {
+    display: inline-block;
+}
