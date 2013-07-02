@@ -35,29 +35,15 @@
         direction: rtl;
         height: 97%;
     }
-    /*
-    .product-list {
-        display: flex;
-        display: -webkit-flex;
-        align-items: center;
-        -webkit-align-items: center;
-        height: 100%;
-    }
-    .product-list > li {
-    }*/
     
-    /* no-flexbox fallback */
     .product-list {
-        padding: 0 10em;
+        display: inline-table;
+        margin: 0 10em;
         height: 100%;
         white-space: nowrap;
     }
     .product-list > li {
-        display: inline-table;
-        height: 100%;
-        margin: 0 2em;
-    }
-    .product-list > li a {
+        padding: 0 2em;
         display: table-cell;
         vertical-align: middle;
     }
