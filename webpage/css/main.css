@@ -25,7 +25,15 @@
     overflow: hidden;
     position: relative;
     transition: max-height 1s ease-out;
-    -webkit-transition:  max-height 1s ease-out;
+    -webkit-transition: max-height 1s ease-out;
+}
+
+.product-list > li figure figcaption {
+    text-align: justify;
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .product-list img {
@@ -33,15 +41,34 @@
     height: 400px;
 }
 
-.product-list figure:hover {
-    max-height: 800px;
+/* figcaption superimposes img on small screens */
+@media only screen and (max-height: 672px) {
+    .product-list figure figcaption {
+        background: rgba(255, 255, 255, .612);
+        border-top: 2px solid black;
+        padding: 0.2em 0.5em 0.5em;
+        position: absolute;
+        bottom: -50%;
+        transition: bottom 1s ease-out;
+        -webkit-transition: bottom 1s ease-out;
+    }
+    .product-list figure:hover figcaption {
+        bottom: 0;
+    }
+}
+
+/* figcaption appears below img on large screens */
+@media only screen and (min-height: 672px) {
+    .product-list figure:hover {
+        max-height: 672px;
+    }
 }
 
 .product-list > li a {
     display: inline-block;
 }
 
-/* horizontal layout on lansscape screens */
+/* horizontal layout on landscape screens */
 @media only screen and (orientation: landscape) {
     html, body {
         direction: rtl;
@@ -62,14 +89,6 @@
     .product-list > li figure {
         direction: ltr;
         white-space: normal;
-    }
-
-    .product-list > li figure figcaption {
-        text-align: justify;
-        hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
     }
 }
 
