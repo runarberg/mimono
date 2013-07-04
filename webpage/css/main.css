@@ -20,6 +20,8 @@
 }
 
 .product-list figure {
+    border: 2px solid black;
+    border-radius: 5px;
     width: 400px;
     max-height: 400px;
     overflow: hidden;
@@ -48,7 +50,7 @@
         border-top: 2px solid black;
         padding: 0.2em 0.5em 0.5em;
         position: absolute;
-        bottom: -50%;
+        bottom: -63%;
         transition: bottom 1s ease-out;
         -webkit-transition: bottom 1s ease-out;
     }
