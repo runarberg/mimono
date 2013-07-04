@@ -39,9 +39,8 @@
     display: inline-block;
 }
 
-/* horizontal layout on biggish screens */
-@media only screen and (min-height: 420px) and (orientation: landscape),
-       only screen and (min-width: 640px){
+/* horizontal layout on lansscape screens */
+@media only screen and (orientation: landscape) {
     html, body {
         direction: rtl;
         height: 97%;
@@ -54,7 +53,6 @@
         white-space: nowrap;
     }
     .product-list > li {
-        padding: 0 2em;
         display: table-cell;
         vertical-align: middle;
     }
@@ -66,6 +64,10 @@
 
     .product-list > li figure figcaption {
         text-align: justify;
+        hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
     }
 }
 
