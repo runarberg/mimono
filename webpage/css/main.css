@@ -1,3 +1,7 @@
+body {
+    font-size: 100%;
+}
+
 .main-title {
     background: url("../img/logo-1.png");
     font-family: sans-serif;
@@ -22,8 +26,8 @@
 .product-list figure {
     border: 2px solid black;
     border-radius: 5px;
-    width: 400px;
-    max-height: 400px;
+    max-height: 25em; /* 400px */
+    max-width: 25em;
     overflow: hidden;
     position: relative;
     transition: max-height 1s ease-out;
@@ -31,26 +35,26 @@
 }
 
 .product-list > li figure figcaption {
-    padding: 0.2em 0.5em 0.5em;
-    text-align: justify;
     hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
+    padding: 0.2em 0.5em 0.5em;
+    text-align: justify;
 }
 
 .product-list img {
-    width: 400px;
-    height: 400px;
+    max-height: 25em;
+    max-width: 25em;
 }
 
 /* figcaption superimposes img on small screens */
-@media only screen and (max-height: 672px) {
+@media only screen and (max-height: 42em) {
     .product-list figure figcaption {
         background: rgba(255, 255, 255, .612);
         border-top: 2px solid black;
         position: absolute;
-        bottom: -63%;
+        bottom: -25em;
         transition: bottom 1s ease-out;
         -webkit-transition: bottom 1s ease-out;
     }
@@ -60,9 +64,9 @@
 }
 
 /* figcaption appears below img on large screens */
-@media only screen and (min-height: 672px) {
+@media only screen and (min-height: 42em) {
     .product-list figure:hover {
-        max-height: 672px;
+        max-height: 42em;
     }
 }
 
@@ -93,4 +97,3 @@
         white-space: normal;
     }
 }
-
