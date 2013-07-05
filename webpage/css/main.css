@@ -5,8 +5,8 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 410px; /* TODO: fix logo to width: 380px */
-    height: 308px;
+    width: 380px;
+    height: 285px;
     text-indent: -999em;
 }
 
