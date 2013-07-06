@@ -1,0 +1,99 @@
+body {
+    font-size: 100%;
+}
+
+.main-title {
+    background: url("../img/logo-1.png");
+    font-family: sans-serif;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 285px;
+    text-indent: -999em;
+}
+
+.product-list {
+    padding: 0;
+}
+
+.product-list > li {
+    list-style: none;
+    margin: 2em 0;
+}
+
+.product-list figure {
+    border: 2px solid black;
+    border-radius: 5px;
+    max-height: 25em; /* 400px */
+    max-width: 25em;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 1s ease-out;
+    -webkit-transition: max-height 1s ease-out;
+}
+
+.product-list > li figure figcaption {
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    padding: 0.2em 0.5em 0.5em;
+    text-align: justify;
+}
+
+.product-list img {
+    max-height: 25em;
+    max-width: 25em;
+}
+
+/* figcaption superimposes img on small screens */
+@media only screen and (max-height: 42em) {
+    .product-list figure figcaption {
+        background: rgba(255, 255, 255, .612);
+        border-top: 2px solid black;
+        position: absolute;
+        bottom: -25em;
+        transition: bottom 1s ease-out;
+        -webkit-transition: bottom 1s ease-out;
+    }
+    .product-list figure:hover figcaption {
+        bottom: 0;
+    }
+}
+
+/* figcaption appears below img on large screens */
+@media only screen and (min-height: 42em) {
+    .product-list figure:hover {
+        max-height: 42em;
+    }
+}
+
+.product-list > li a {
+    display: inline-block;
+}
+
+/* horizontal layout on landscape screens */
+@media only screen and (orientation: landscape) {
+    html, body {
+        direction: rtl;
+        height: 97%;
+    }
+    
+    .product-list {
+        display: inline-table;
+        margin: 0 10em;
+        height: 100%;
+        white-space: nowrap;
+    }
+    .product-list > li {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .product-list > li figure {
+        direction: ltr;
+        white-space: normal;
+    }
+}

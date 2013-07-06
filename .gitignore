@@ -1,1 +1,16 @@
+# temp files
 *~
+.#*
+\#*#
+
+# all python compiled files (.pyc)
+*.pyc
+
+# Database files
+*.db
+
+# backup files and foulders
+*.bak
+
+# leave the dev folder alone
+webpage-dev/*

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block contents %}
+    <ul class="product-list">
+        {% for article in articles %}
+            <li><figure>
+                <a href="{{ article.url }}"><img src="{{ article.feature_pic }}"
+                                                 alt="{{ article.title }}" /></a>
+                <figcaption>{{ article.summary }}</figcaption>
+            </figure></li>
+        {% endfor %}
+    </ul>
+{% endblock contents %}
