@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <article>
+        <header>
+            <figure class="feature-picture">
+                <img src="{{ article.feature_pic }}"
+                     alt="Feature picture for {{ article.title }}" />
+            </figure>
+            <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+        </header>
+        <div class="article-content">
+            {{ article.content }}
+        </div>
+    </article>
+{% endblock content %}

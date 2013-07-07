@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <title>{{ SITENAME }}</title>
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
     </head>
-    <body>
+    <body class="{% block bodyclass %}{% endblock %}">
         {% block header %}
             <header>
-                <h1 class="main-title ir">MIMONO</h1>
+                <a href="{{ SITEURL }}"><h1 class="main-title ir">MIMONO</h1></a>
             </header>
         {% endblock header %}
-        {% block contents %}{% endblock contents %}
+        {% block content %}{% endblock content %}
     </body>
 </html>

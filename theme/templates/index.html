@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 
-{% block contents %}
-    <ul class="product-list">
+{% block bodyclass %}index{% endblock %}
+
+{% block content %}
+    <ul class="article-list">
         {% for article in articles %}
             <li><figure>
-                <a href="{{ article.url }}"><img src="{{ article.feature_pic }}"
-                                                 alt="{{ article.title }}" /></a>
-                <figcaption>{{ article.summary }}</figcaption>
+                <a href="{{ SITEURL }}/{{ article.url }}"><img src="{{ article.feature_pic }}"
+                                                               alt="{{ article.title }}" /></a>
+                <figcaption>
+                    {{- article.summary }}
+                    <a class="read-on" href="{{ SITEURL }}/{{ article.url }}">Read on</a>
+                </figcaption>
             </figure></li>
         {% endfor %}
     </ul>
-{% endblock contents %}
+{% endblock content %}
