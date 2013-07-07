@@ -5,6 +5,6 @@ import sys
 sys.path.append('.')
 from devconf import *
 
-SITEURL = 'http://mimono.herokuapp.com'
+SITEURL = 'http://mimono-kidsclothes.herokuapp.com'
 OUTPUT_PATH = 'webpage'
 RELATIVE_URLS = False

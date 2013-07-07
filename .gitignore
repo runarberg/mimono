@@ -12,5 +12,6 @@
 # backup files and foulders
 *.bak
 
-# leave the dev folder alone
+# leave the web folder alone
 webpage-dev/*
+webpage/*

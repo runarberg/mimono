@@ -6,24 +6,33 @@ body {
     background: url("../img/logo-1.png");
     font-family: sans-serif;
     margin: 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     width: 380px;
     height: 285px;
     text-indent: -999em;
+    z-index: 99;
 }
 
-.product-list {
+/*
+ * Index styles
+ */
+
+body.index .main-title {
+    position: fixed;
+}
+
+.article-list {
     padding: 0;
 }
 
-.product-list > li {
+.article-list > li {
     list-style: none;
     margin: 2em 0;
 }
 
-.product-list figure {
+.article-list figure {
     border: 2px solid black;
     border-radius: 5px;
     max-height: 25em; /* 400px */
@@ -34,7 +43,7 @@ body {
     -webkit-transition: max-height 1s ease-out;
 }
 
-.product-list > li figure figcaption {
+.article-list > li figure figcaption {
     hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -43,14 +52,14 @@ body {
     text-align: justify;
 }
 
-.product-list img {
+.article-list img {
     max-height: 25em;
     max-width: 25em;
 }
 
 /* figcaption superimposes img on small screens */
 @media only screen and (max-height: 42em) {
-    .product-list figure figcaption {
+    .article-list figure figcaption {
         background: rgba(255, 255, 255, .612);
         border-top: 2px solid black;
         position: absolute;
@@ -58,42 +67,60 @@ body {
         transition: bottom 1s ease-out;
         -webkit-transition: bottom 1s ease-out;
     }
-    .product-list figure:hover figcaption {
+    .article-list figure:hover figcaption {
         bottom: 0;
     }
 }
 
 /* figcaption appears below img on large screens */
 @media only screen and (min-height: 42em) {
-    .product-list figure:hover {
+    .article-list figure:hover {
         max-height: 42em;
     }
 }
 
-.product-list > li a {
+.article-list > li a {
     display: inline-block;
 }
 
 /* horizontal layout on landscape screens */
 @media only screen and (orientation: landscape) {
     html, body {
-        direction: rtl;
         height: 97%;
     }
+
+    body.index {
+        direction: rtl;
+    }
     
-    .product-list {
+    .article-list {
         display: inline-table;
         margin: 0 10em;
         height: 100%;
         white-space: nowrap;
     }
-    .product-list > li {
+    .article-list > li {
         display: table-cell;
         vertical-align: middle;
     }
 
-    .product-list > li figure {
+    .article-list > li figure {
         direction: ltr;
         white-space: normal;
     }
+}
+
+/*
+ * Article styles
+ */
+
+article .feature-picture {
+    float: right;
+    max-width: 23.75em; /* 380px */
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+article h1 {
+    margin-top: 0;
 }
