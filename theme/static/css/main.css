@@ -86,7 +86,7 @@ body.index .main-title {
 /* horizontal layout on landscape screens */
 @media only screen and (orientation: landscape) {
     html, body {
-        height: 97%;
+        height: 99%;
     }
 
     body.index {
@@ -106,6 +106,7 @@ body.index .main-title {
 
     .article-list > li figure {
         direction: ltr;
+        margin: 0 2em;
         white-space: normal;
     }
 }
