@@ -21,7 +21,10 @@ body {
     width: 440px;
     height: 114px;
     transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
     transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    -webkit-transform: rotate(35deg);
     z-index: 8;
 }
 .index .main-title:hover:before {
