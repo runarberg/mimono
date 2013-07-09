@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>{{ SITENAME }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
         {% include "snippets/feeds.html" %}
@@ -10,7 +11,7 @@
     <body class="{% block bodyclass %}{% endblock %}">
         {% block header %}
             <header>
-                <a href="{{ SITEURL }}"><h1 class="main-title ir">MIMONO</h1></a>
+                <h1 class="main-title ir"><a href="{{ SITEURL }}">MIMONO</a></h1>
             </header>
         {% endblock header %}
         {% block content %}{% endblock content %}

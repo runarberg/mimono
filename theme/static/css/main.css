@@ -3,16 +3,20 @@ body {
 }
 
 .main-title {
-    background: url("../img/logo-1.png");
     font-family: sans-serif;
     margin: 0;
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 99;
+}
+
+.main-title a {
+    background: url("../img/logo-1.png");
+    display: inline-block;
     width: 380px;
     height: 285px;
     text-indent: -999em;
-    z-index: 99;
 }
 
 /*
