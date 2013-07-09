@@ -5,6 +5,7 @@
         <title>{{ SITENAME }}</title>
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
+        {% include "snippets/feeds.html" %}
     </head>
     <body class="{% block bodyclass %}{% endblock %}">
         {% block header %}
