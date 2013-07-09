@@ -8,15 +8,75 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 99;
+    width: 380px;
+    height: 285px;
+}
+.index .main-title:before {
+    content: "";
+    background-color: rgba(256, 256, 177, 0.5);
+    border: 2px solid black;
+    position: absolute;
+    top: 85px;
+    left: -30px;
+    width: 440px;
+    height: 114px;
+    transition: background-color 0.5s;
+    transform: rotate(35deg);
+    z-index: 8;
+}
+.index .main-title:hover:before {
+    background-color: rgba(256, 256, 89, 0.5);
 }
 
 .main-title a {
     background: url("../img/logo-1.png");
     display: inline-block;
-    width: 380px;
-    height: 285px;
+    position: absolute;
     text-indent: -999em;
+    z-index: 9;
+}
+
+.main-title a#main-title-1 {
+    background-position: -22px -18px;
+    top: 18px;
+    left: 22px;
+    width: 51px;
+    height: 63px;
+}
+.main-title a#main-title-2 {
+    background-position: -80px -37px;
+    top: 37px;
+    left: 80px;
+    width: 30px;
+    height: 87px;
+}
+.main-title a#main-title-3 {
+    background-position: -120px -83px;
+    top: 83px;
+    left: 120px;
+    width: 52px;
+    height: 63px;
+}
+.main-title a#main-title-4 {
+    background-position: -182px -127px;
+    top: 127px;
+    left: 182px;
+    width: 58px;
+    height: 62px;
+}
+.main-title a#main-title-5 {
+    background-position: -248px -170px;
+    top: 170px;
+    left: 248px;
+    width: 49px;
+    height: 65px;
+}
+.main-title a#main-title-6 {
+    background-position: -305px -209px;
+    top: 209px;
+    left: 305px;
+    width: 61px;
+    height: 61px;
 }
 
 /*

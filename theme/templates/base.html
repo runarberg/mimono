@@ -11,7 +11,7 @@
     <body class="{% block bodyclass %}{% endblock %}">
         {% block header %}
             <header>
-                <h1 class="main-title ir"><a href="{{ SITEURL }}">MIMONO</a></h1>
+                {% include "snippets/main-title.html" %}
             </header>
         {% endblock header %}
         {% block content %}{% endblock content %}
