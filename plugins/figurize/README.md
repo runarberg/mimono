@@ -15,7 +15,7 @@ How it works
 All text followed by an image in the same paragraph will be wraped inside
 `<figcaption>`, each paragraph break will conclude the `<figure>`
 
-    !(image)[src/to/img.jpg "some alt"] This will be turned into *figcaption*
+    ![image alt](src/to/img.jpg) This will be turned into *figcaption*
 
 will be compiled to...
 
@@ -28,15 +28,15 @@ Usage
 -----
 
 To write a ‘figurized’ blog post, start each paragraph with an image
-`!(image)[some/img.jpg "some alt text"]` followed by the caption you want.
+`![Some alt text](some/img.jpg)` followed by the caption you want.
 
 To start the next figure, leave an empty line (paragraph break) and specify
 your next picture.
 
 ### Example
 
-    !(image)[some/img1.jpg] This is the caption of the first figure
+    ![image 1](some/img1.jpg) This is the caption of the first figure
 
-    !(image)[some/img2.jpg] And this will be displayed under the second image
+    ![image 2](some/img2.jpg) And this will be displayed under the second image
     It can have multiple line, but the next blank line will conclude the
     figure.
