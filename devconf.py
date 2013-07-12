@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+import sys
+
 AUTHOR = u'Chantal Uto'
 SITENAME = u'MIMONO'
 SITEURL = 'http://127.0.0.1:8000'
@@ -17,6 +19,9 @@ DATE_FORMATS = {
 
 THEME = "theme"
 IGNORE_FILES = ['.#*', '*~', 'TODO']
+
+sys.path.append('plugins')
+PLUGINS = ['figurize',]
 
 RELATIVE_URLS = False
 
